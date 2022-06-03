@@ -1,0 +1,1 @@
+Mi proyecto se trata de una web donde se van a poder comprar y leer la version digital de mangas.
