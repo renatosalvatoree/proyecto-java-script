@@ -1,3 +1,5 @@
+@import "./search";
+@import "./steelBallRun";
 @mixin flex-row-center {
     display: flex;
     flex-direction: row;
