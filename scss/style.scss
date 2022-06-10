@@ -24,10 +24,31 @@
 main{
     @include flex-column-center;
 
-    width: 100%;
+    // width: 100%;
+    background-color: #E9EAEC;
+
+    .navBar{
+        position: fixed;
+        left: 0px;
+        height: 100vh;
+        width: 60px;
+        background-color: #E9EAEC;
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            margin-bottom: 20px;
+            width: 40px;
+        }
+    }
 
     .updates{
         @include flex-row-center;
+        background-color: #D4E2E2;
         border-radius: 5px;
         box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         width: 60%;
