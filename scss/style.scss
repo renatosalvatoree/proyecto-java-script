@@ -1,3 +1,4 @@
+@import "./variables";
 @import "./search";
 @import "./steelBallRun";
 @mixin flex-row-center {
@@ -63,6 +64,7 @@ main{
         .updatesTitles{
             font-size: 22px;
             width: 70%;
+            font-weight: bold;
             a{
                 display: block;
                 margin-left: 30px;
