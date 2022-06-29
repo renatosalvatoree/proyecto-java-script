@@ -29,9 +29,11 @@
     flex-direction: row;
     justify-content: space-around;
     width: 60%;
+    margin-bottom: 50px;
     .searchResult {
         width: 25%;
         img {
+        border-radius: 5px;
         box-shadow: 0px 10px 16px rgba(0,0,0,0.5);
         width: 100%;
     }

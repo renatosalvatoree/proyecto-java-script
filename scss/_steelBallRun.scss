@@ -1,3 +1,15 @@
+@import "./variables";
+
+body{
+    background-color: $darkerGray;
+}
+
+button{
+    background-color: $gray;
+    border: 0px;
+    height: 48px;
+    border-radius: 5px;
+}
 .titleBackground{
     position: absolute;
     top: 0px;
@@ -10,24 +22,25 @@
 
 .mangaCover{
     position: absolute;
-    top: 150px;
-    left: 300px;
+    top: 90px;
+    left: 200px;
     img{
+        border-radius: 5px;
         box-shadow: 0px 10px 16px rgba(0,0,0,0.5);
-
         width: 250px;
     }
 }
 
 .buttons{
     position: absolute;
-    left: 600px;
+    left: 500px;
     top: 330px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .buyButton{
+    border-radius: 6px;
     height: 48px;
     width: 120px;
     font-family: 'Poppins', sans-serif;
@@ -43,4 +56,11 @@
     width: 30px;
     height: 30px;
     margin-left: 28px;
+}
+
+.mangaDescription{
+    width: 70%;
+    position: absolute;
+    top: 500px;
+    left: 200px;
 }
