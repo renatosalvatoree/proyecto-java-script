@@ -8,19 +8,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="../js/script.js"></script>
 </head>
 
 <body>
     <main>
-        <input class="searchBar" type="text" placeholder="Search for your favorite manga..">
+        <input class="searchBar" type="text" placeholder="Search for your favorite manga..." id="busqueda">
+        <button onclick="realizarBusqueda()">Buscar</button>
         <div class="mangas">
-            <div class="searchResult">
+            <div class="searchResult" id="hunter">
                 <img src="../images/mangaCovers/hunterXHunterCover.png">
                 <p>Hunter X Hunter</p>
             </div>
-            <div class="searchResult">
+            <div class="searchResult" id="steel">
                 <img src="../images/mangaCovers/steelBallRunCover.jpg">
                 <p>Steel Ball Run</p>
             </div>
