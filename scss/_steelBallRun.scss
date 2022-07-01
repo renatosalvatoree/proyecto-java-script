@@ -4,13 +4,8 @@ body{
     background-color: $darkerGray;
 }
 
-button{
-    background-color: $gray;
-    border: 0px;
-    height: 48px;
-    border-radius: 5px;
-}
-.titleBackground{
+
+.titleBackgroundSteelBallRun{
     position: absolute;
     top: 0px;
     width: 100%;
@@ -19,6 +14,8 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 
 .mangaCover{
     position: absolute;
@@ -38,25 +35,40 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.buyButton{
-    border-radius: 6px;
-    height: 48px;
-    width: 120px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 19px;
-    font-weight: 500;
-    font-style: normal;
-    font-variant: normal;
-    background-color: $main-color;
-    color: white;
+    .buyButton{
+        border-radius: 6px;
+        height: 48px;
+        width: 120px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 19px;
+        font-weight: 500;
+        font-style: normal;
+        font-variant: normal;
+        background-color: $main-color;
+        color: white;
+        border: 0px;
+    }
+    .buyButton:hover{
+        background-color: #b192d4;
+    }
+    .buyButton:active{
+        background-color: #976dc5;
+    }
+    .favoriteButton{
+        background-color: #3d3d3d;
+        width: 48px;
+        height: 48px;
+        margin-left: 8px;
+        border: 0px;
+        border-radius: 5px;
+        img{
+            width: 30px;
+        }
+    }
 }
 
-.favoriteButton{
-    width: 30px;
-    height: 30px;
-    margin-left: 28px;
-}
+
+
 
 .mangaDescription{
     width: 70%;
