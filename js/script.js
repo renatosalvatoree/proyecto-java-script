@@ -1,3 +1,5 @@
+
+
 function realizarBusqueda(){
     const busqueda = document.getElementById("busqueda").value;
     alert(busqueda);
