@@ -7,22 +7,24 @@
 @import "./chainsawMan";
 @import "./fairyTail";
 @import "./spyXFamily";
+
 @font-face {
     font-family: "Helvetica-custom";
     src: url(../css/font/Helvetica.otf)
 }
+
 @mixin flex-row-center {
     display: flex;
     flex-direction: row;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 * {
@@ -33,58 +35,65 @@
     font-family: "Helvetica-custom";
 }
 
-main{
+main {
     @include flex-column-center;
 
     background-color: #191a1c;
 
-    .navBar{
+    .navBar {
         position: fixed;
         left: 0px;
         height: 100vh;
         width: 60px;
         background-color: #2c2c2c;
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        ul{
+        ul {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        img{
+
+        img {
             margin-bottom: 20px;
             width: 40px;
         }
     }
-    .pepe{
+
+    .pepe {
         margin-top: 50px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
-    .updates{
+
+    .updates {
         @include flex-row-center;
         background-color: #2c2c2c;
         border-radius: 5px;
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 35%;
         margin-bottom: 32px;
-        .updatesTitles{
+
+        .updatesTitles {
             font-size: 22px;
             width: 70%;
             font-weight: bold;
-            a{
+
+            a {
                 display: block;
                 margin-left: 30px;
                 margin-bottom: 16px;
             }
-            
+
         }
-        .updatesImages{
+
+        .updatesImages {
             width: 30%;
-            img{
+
+            img {
                 border-radius: 5px;
                 display: inline;
                 width: 100%;
@@ -92,14 +101,15 @@ main{
         }
     }
 
-   #carouselExampleCaptions{
-       width: 990px;
-       height: 220px;
-       img{ 
-        width: 100%;
-       }
-
-   }
+    #carouselExampleCaptions {
+        width: 60%;
+        height: 300px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        img {
+            border-radius: 5px;
+        }
+    }
 
 
 
