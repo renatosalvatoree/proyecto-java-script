@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass ./scss/style.scss ./css/style.css -w --no-source-map -s compressed"
+    "start": "sass ./scss/style.scss ./css/style.css -w --no-source-map -s compressed",
+    "build": "[mangadex] build --output public"
   },
   "author": "",
   "license": "ISC"
