@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
-    <script src="../js/script.js"></script>
 </head>
 
 <body>
@@ -20,42 +19,43 @@
                 <a href="../index.html"><img src="../images/icons/m.png" class="logo"></a>
              <ul>
                 <li><a href="../pages/search.html"><img src="../images/icons/search.png" class="searchIcon"></a></li>
-                <li><a href="../index.html"><img src="../images/icons/bookmark.png"></a></li>
+                <li><a href="../pages/saves.html"><img src="../images/icons/bookmark.png"></a></li>
                 <li><a href="../index.html"><img src="../images/icons/shopping-cart.png"></a></li>
               </ul>
             </div>
           </nav>
         <input class="searchBar" type="text" placeholder="Search for your favorite manga..." id="busqueda">
-        <button id="submit">Buscar</button>
+        <!-- <button id="submit">Buscar</button> -->
         <div class="mangas">
-            <div class="didntSearchFor" id="hunterXHunter">
+            <div class="searchResult" id="hunterXHunter">
                 <a href="../pages/mangas/hunterXHunter.html"><img src="../images/mangaCovers/hunterXHunterCover.png"></a>
                 <p>Hunter X Hunter</p>
             </div>
-            <div class="didntSearchFor" id="steelBallRun">
+            <div class="searchResult" id="steelBallRun">
                 <a href="../pages/mangas/steelBallRun.html"><img src="../images/mangaCovers/steelBallRunCover.jpg"></a>
                 <p>Jojo - Steel Ball Run</p>
             </div>
-            <div class="didntSearchFor" id="chainsawMan">
+            <div class="searchResult" id="chainsawMan">
                 <a href="../pages/chainsawMan.html"><img src="../images/mangaCovers/chainsawman.png"></a>
                 <p>Chainsaw Man</p>
             </div> 
         </div>
         <div class="mangas">
-            <div class="didntSearchFor" id="fairyTail">
+            <div class="searchResult" id="fairyTail">
                 <a href="../pages/mangas/fairyTail.html"><img src="../images/mangaCovers/fairyTail.png"></a>
                 <p>Fairy Tail</p>
             </div>
-            <div class="didntSearchFor" id="spyXFamily">
+            <div class="searchResult" id="spyXFamily">
                 <a href="../pages/mangas/spyXFamily.html"><img src="../images/mangaCovers/spyXFamily.png"></a>
                 <p>Spy x Family</p>
             </div>
-            <div class="didntSearchFor" id="stoneOcean">
+            <div class="searchResult" id="stoneOcean">
                 <a href="../pages/mangas/stoneOcean.html"><img src="../images/mangaCovers/stoneOcean.jpg"></a>
                 <p>Jojo - Stone Ocean</p>
             </div> 
         </div>
     </main>
+    <script src="../js/search.js"></script>
 </body>
 
 </html>

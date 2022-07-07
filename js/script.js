@@ -1,40 +1,67 @@
-const mangas = [{
-        nombre: "hunter x hunter",
-        id: "hunterXHunter"
-    },
-    {
-        nombre: "jojo - steel ball run",
-        id: "steelBallRun"
-    },
-    {
-        nombre: "chainsaw man",
-        id: "chainsawMan"
-    },
-    {
-        nombre: "fairy tail",
-        id: "fairyTail"
-    },
-    {
-        nombre: "spy x family",
-        id: "spyXFamily"
-    },
-    {
-        nombre: "jojo - stone ocean",
-        id: "stoneOcean"
-    }
-]
+// localStorage.clear()
 
-let busqueda = document.getElementById("submit")
-busqueda.onclick = realizarBusqueda();
+const mangasGuardados = []
 
-function realizarBusqueda() {
-    for (const todosLosMangas of mangas){
-        const reset = document.getElementById(todosLosMangas.id);
-        reset.className = "didntSearchFor"
+function guardarManga() {
+    let indiceSteelBallRun;
+    // let mangasGuardadosJSON;
+    let indiceHunterXHunter;
+    // let indiceStoneOcean;
+    // let idiceChainsawMan;
+    // let indiceSpyXFamily;
+
+    const botonGuardado = document.getElementById("guardado");
+    const botonNoGuardado = document.getElementById("noGuardado");
+    if (botonGuardado.className == "noMostrar") {
+        botonGuardado.className = "saveButtonSelected"
+        botonNoGuardado.className = "noMostrar"
+        mangasGuardados.push({
+            nombre: "jojo - steel ball run",
+            id: "steelBallRun"
+        })
+        indiceSteelBallRun = mangasGuardados.length - 1;
+        console.log(indiceSteelBallRun);
+        console.log(mangasGuardados);
+        // mangasGuardadosJSON = JSON.stringify(mangasGuardados);
+        localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
+    } else if (botonNoGuardado.className == "noMostrar") {
+        const mangasGuardadosJson = JSON.parse(localStorage.getItem("mangasGuardados"));
+        console.log(mangasGuardadosJson);
+        botonGuardado.className = "noMostrar"
+        botonNoGuardado.className = "saveButtonSelected"
+        mangasGuardados.splice(indiceSteelBallRun, 1);
+        console.log(mangasGuardados);
     }
-    const busqueda = document.getElementById("busqueda").value;
-    const resultadoBusqueda = mangas.filter((n) => n.nombre.includes(busqueda));
-    for (const resultado of resultadoBusqueda) {
-        let encontrados = document.getElementById(resultado.id);
-        encontrados.className = "searchResult"
-    }}
+}
+
+function guardarMangaHunterXHunter() {
+    let indiceSteelBallRun;
+    // let mangasGuardadosJSON;
+    let indiceHunterXHunter;
+    // let indiceStoneOcean;
+    // let idiceChainsawMan;
+    // let indiceSpyXFamily;
+
+    const botonGuardado = document.getElementById("guardado");
+    const botonNoGuardado = document.getElementById("noGuardado");
+    if (botonGuardado.className == "noMostrar") {
+        botonGuardado.className = "saveButtonSelected"
+        botonNoGuardado.className = "noMostrar"
+        mangasGuardados.push({
+            nombre: "hunter x hunter",
+            id: "hunterXHunter"
+        })
+        indiceHunterXHunter = mangasGuardados.length - 1;
+        console.log(indiceSteelBallRun);
+        console.log(mangasGuardados);
+        // mangasGuardadosJSON = JSON.stringify(mangasGuardados);
+        localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
+    } else if (botonNoGuardado.className == "noMostrar") {
+        const mangasGuardadosJson = JSON.parse(localStorage.getItem("mangasGuardados"));
+        console.log(mangasGuardadosJson);
+        botonGuardado.className = "noMostrar"
+        botonNoGuardado.className = "saveButtonSelected"
+        mangasGuardados.splice(indiceSteelBallRun, 1);
+        console.log(mangasGuardados);
+    }
+}
