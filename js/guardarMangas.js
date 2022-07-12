@@ -1,7 +1,8 @@
 
 const mangas = [{
     nombre: "hunter x hunter",
-    id: "hunterXHunter"
+    id: "hunterXHunter",
+    indice: undefined
 },
 {
     nombre: "jojo - steel ball run",
@@ -31,11 +32,14 @@ function guardarManga(){
 const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
 const saveButton = document.getElementById("saveButton")
-let mangasGuardadosJSON  = JSON.stringify(mangasGuardados);
+// let mangasGuardadosJSON  = JSON.stringify(mangasGuardados);
 
 
 if(guardado.className == "noMostrar")  {
-    mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
+    const mangasGuardadosJSON = localStorage.getItem("mangasGuardados");
+    if(mangasGuardadosJSON){
+        mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
+    }
     
     const mangaId = saveButton.className;
     const resultadoBusqueda = mangas.filter((n) => n.id.includes(mangaId));
@@ -43,15 +47,22 @@ if(guardado.className == "noMostrar")  {
         mangasGuardados.push(resultado);
     }
     console.log(mangasGuardados);
-    
 
     
 
-    mangasGuardadosJSON = JSON.stringify(mangasGuardados);
-    localStorage.setItem("mangasGuardados", mangasGuardadosJSON);
+    // mangasGuardadosJSON = JSON.stringify(mangasGuardados);
+    localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
 
-    // guardado.className = "saveButtonSelected"
-    // noGuardado.className = "noMostrar"
+    guardado.className = "saveButtonSelected"
+    noGuardado.className = "noMostrar"
+} else if (noGuardado.className == "noMostrar") {
+    mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
+    let indiceManga = mangasGuardados.map(function(e) { return e.id; }).indexOf('chainsawMan');
+    mangasGuardados.splice(indiceManga, 1);
+    localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
+    console.log(mangasGuardados);
+    guardado.className = "noMostrar"
+    noGuardado.className = "saveButtonSelected"
 }
 }
 
