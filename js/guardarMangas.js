@@ -2,7 +2,6 @@
 const mangas = [{
     nombre: "hunter x hunter",
     id: "hunterXHunter",
-    indice: undefined
 },
 {
     nombre: "jojo - steel ball run",
@@ -31,9 +30,13 @@ let mangasGuardados = [];
 function guardarManga(){
 const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
-const saveButton = document.getElementById("saveButton")
-// let mangasGuardadosJSON  = JSON.stringify(mangasGuardados);
-
+const saveButton = document.getElementById("saveButton");
+// const estado1 = localStorage.getItem("botonGuardado")
+// const estado2 = localStorage.getItem("botonNoGuardado")
+// guardado.className = estado1
+// noGuardado.className = estado2
+guardado.className = localStorage.getItem("botonGuardado")
+noGuardado.className = localStorage.getItem("botonNoGuardado")
 
 if(guardado.className == "noMostrar")  {
     const mangasGuardadosJSON = localStorage.getItem("mangasGuardados");
@@ -46,63 +49,31 @@ if(guardado.className == "noMostrar")  {
     for (const resultado of resultadoBusqueda) {
         mangasGuardados.push(resultado);
     }
-    console.log(mangasGuardados);
-
     
-
-    // mangasGuardadosJSON = JSON.stringify(mangasGuardados);
     localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
-
-    guardado.className = "saveButtonSelected"
-    noGuardado.className = "noMostrar"
+    console.log(mangasGuardados);
+    // for (const resultado of mangasGuardados) {
+    //     let guardados = document.getElementsByClassName(resultado.id)
+    //     // encontrados.className = "searchResult"
+    //     console.log(guardados);
+    // }
+    localStorage.setItem("botonGuardado", "saveButtonSelected");
+    localStorage.setItem("botonNoGuardado", "noMostrar");
+    guardado.className = localStorage.getItem("botonGuardado")
+    noGuardado.className = localStorage.getItem("botonNoGuardado")
+    // localStorage.setItem("botonGuardado", guardado.className);
+    // localStorage.setItem("botonNoGuardado", noGuardado.className);
 } else if (noGuardado.className == "noMostrar") {
     mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
     let indiceManga = mangasGuardados.map(function(e) { return e.id; }).indexOf('chainsawMan');
     mangasGuardados.splice(indiceManga, 1);
     localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
     console.log(mangasGuardados);
-    guardado.className = "noMostrar"
-    noGuardado.className = "saveButtonSelected"
+    localStorage.setItem("botonGuardado", "noMostrar");
+    localStorage.setItem("botonNoGuardado", "saveButtonSelected");
+    guardado.className = localStorage.getItem("botonGuardado")
+    noGuardado.className = localStorage.getItem("botonNoGuardado")
+    // localStorage.setItem("botonGuardado", guardado.className);
+    // localStorage.setItem("botonNoGuardado", noGuardado.className);
 }
 }
-
-// const mangasGuardados = [{
-//     nombre: "jojo - stone ocean",
-//     id: "stoneOcean"
-// }];
-// mangasGuardadosJSON = JSON.stringify(mangasGuardados);
-//     localStorage.setItem("mangasGuardados", mangasGuardadosJSON);
-
-// function guardarManga(){
-// const guardado = document.getElementById("guardado");
-// const noGuardado = document.getElementById("noGuardado");
-// const saveButton = document.getElementById("saveButton")
-// let mangasGuardadosJSON  = JSON.stringify(mangasGuardados);
-
-
-// if(guardado.className == "noMostrar")  {
-//     const obtenerMangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
-//     // console.log(obtenerMangasGuardados)
-//     localStorage.removeItem("mangasGuardados")
-//     for (const manga of obtenerMangasGuardados){
-        
-//         mangasGuardados.push(manga);
-//     }
-//      console.log(mangasGuardados);
-//     const mangaId = saveButton.className;
-//     const resultadoBusqueda = mangas.filter((n) => n.id.includes(mangaId));
-//     for (const resultado of resultadoBusqueda) {
-//         mangasGuardados.push(resultado);
-//     }
-//     // console.log(mangasGuardados);
-    
-
-    
-
-//     mangasGuardadosJSON = JSON.stringify(mangasGuardados);
-//     localStorage.setItem("mangasGuardados", mangasGuardadosJSON);
-
-//     // guardado.className = "saveButtonSelected"
-//     // noGuardado.className = "noMostrar"
-// }
-// }
