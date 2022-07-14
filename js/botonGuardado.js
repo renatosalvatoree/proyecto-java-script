@@ -1,9 +1,0 @@
-const guardado = document.getElementById("guardado");
-const noGuardado = document.getElementById("noGuardado");
-// const saveButton = document.getElementById("saveButton");
-// const estado1 = localStorage.getItem("botonGuardado")
-// const estado2 = localStorage.getItem("botonNoGuardado")
-// guardado.className = estado1
-// noGuardado.className = estado2
-guardado.className = localStorage.getItem("botonGuardado")
-noGuardado.className = localStorage.getItem("botonNoGuardado")
