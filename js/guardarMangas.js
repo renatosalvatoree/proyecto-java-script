@@ -29,6 +29,7 @@ const mangas = [{
 
 
 let mangasGuardados = [];
+localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
 const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
 const saveButton = document.getElementById("saveButton");
