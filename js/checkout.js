@@ -25,54 +25,47 @@ const mangas = [{
 }
 ]
 
+noGuardado.addEventListener("click", guardarManga())
 
 
-
-let mangasGuardados = [];
-//localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
+let carrito = [];
+localStorage.setItem("carrito", JSON.stringify(carrito));
 const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
 const saveButton = document.getElementById("saveButton");
-
-if(localStorage.getItem("mangasGuardados") == ""){
-    localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
-}
-mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"))
-for (const manga of mangasGuardados){
+carrito = JSON.parse(localStorage.getItem("carrito"))
+for (const manga of carrito){
     if(saveButton.className == manga.id){
         guardado.className = "saveButtonSelected"
         noGuardado.className = "noMostrar"
     }
 }
-saveButton.addEventListener("click", guardarManga)
 function guardarManga(){
 
 if(guardado.className == "noMostrar")  {
-    const mangasGuardadosJSON = localStorage.getItem("mangasGuardados");
+    const mangasGuardadosJSON = localStorage.getItem("carrito");
     if(mangasGuardadosJSON){
-        mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
+        carrito = JSON.parse(localStorage.getItem("carrito"));
     }
     
     const mangaId = saveButton.className;
     console.log(mangaId)
     const resultadoBusqueda = mangas.filter((n) => n.id.includes(mangaId));
     for (const resultado of resultadoBusqueda) {
-        mangasGuardados.push(resultado);
+        carrito.push(resultado);
     }
     
-    localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
-    console.log(mangasGuardados);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log(carrito);
     
     guardado.className = "saveButtonSelected"
     noGuardado.className = "noMostrar"
 } else if (noGuardado.className == "noMostrar") {
-    mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"));
-    const mangaId = saveButton.className;
-    let indiceManga = mangasGuardados.map(function(e) { return e.id; }).indexOf(mangaId);
-    mangasGuardados.splice(indiceManga, 1);
-    console.log(indiceManga)
-    localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
-    console.log(mangasGuardados);
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    let indiceManga = carrito.map(function(e) { return e.id; }).indexOf('chainsawMan');
+    carrito.splice(indiceManga, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log(carrito);
     
     guardado.className = "noMostrar"
     noGuardado.className = "saveButtonSelected"
