@@ -4,3 +4,22 @@
     background-color: rgb(203, 182, 226);
     border-radius: 5px;
 }
+
+.botonCheckout{
+        border-radius: 6px;
+        height: 38px;
+        width: 235px;
+        font-size: 19px;
+        font-weight: 500;
+        font-style: normal;
+        font-variant: normal;
+        background-color: $main-color;
+        color: white;
+        border: 0px;
+    }
+    .botonCheckout:hover{
+        background-color: #b192d4;
+    }
+    .botonCheckout:active{
+        background-color: #976dc5;
+    }

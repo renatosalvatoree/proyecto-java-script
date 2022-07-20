@@ -2,26 +2,32 @@
 const mangas = [{
     nombre: "hunter x hunter",
     id: "hunterXHunter",
+    precio: "$7"
 },
 {
     nombre: "jojo - steel ball run",
-    id: "steelBallRun"
+    id: "steelBallRun",
+    precio: "$12"
 },
 {
     nombre: "chainsaw man",
-    id: "chainsawMan"
+    id: "chainsawMan",
+    precio: "$9"
 },
 {
     nombre: "fairy tail",
-    id: "fairyTail"
+    id: "fairyTail",
+    precio: "$8"
 },
 {
     nombre: "spy x family",
-    id: "spyXFamily"
+    id: "spyXFamily",
+    precio: "$12"
 },
 {
     nombre: "jojo - stone ocean",
-    id: "stoneOcean"
+    id: "stoneOcean",
+    precio: "$12"
 }
 ]
 
