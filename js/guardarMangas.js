@@ -46,7 +46,7 @@ const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
 const saveButton = document.getElementById("saveButton");
 
-if(localStorage.getItem("mangasGuardados") == ""){
+if(localStorage.getItem("mangasGuardados")){
     localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
 }
 mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"))

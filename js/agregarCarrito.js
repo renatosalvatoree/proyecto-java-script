@@ -33,7 +33,6 @@ let carrito = [];
 
 
 function agregarCarrito(){
-    console.log("jeje")
     const carritoJSON = sessionStorage.getItem("carrito");
     if(carritoJSON){
         carrito = JSON.parse(sessionStorage.getItem("carrito"));
@@ -46,4 +45,18 @@ function agregarCarrito(){
         carrito.push(resultado);
     }
     sessionStorage.setItem("carrito", JSON.stringify(carrito));
+    window.location.reload(true)
 }
+if(sessionStorage.getItem("carrito")){
+carrito = JSON.parse(sessionStorage.getItem("carrito"))
+console.log(carrito)
+for(const el of carrito){
+    let botonComprar = document.getElementById("buyButton");
+    let botonAgregado = document.getElementById("addedButton");
+    console.log(botonComprar.className)
+    if(botonComprar.className == el.id){
+        botonComprar.className = "hidden"
+        botonAgregado.className = "addedButton"
+    }
+    
+}}
