@@ -5,7 +5,7 @@
     border-radius: 5px;
 }
 
-.botonCheckout{
+.mostrarBotonCheckout{
         border-radius: 6px;
         height: 38px;
         width: 235px;
@@ -17,9 +17,12 @@
         color: white;
         border: 0px;
     }
-    .botonCheckout:hover{
+    .mostrarBotonCheckout:hover{
         background-color: #b192d4;
     }
-    .botonCheckout:active{
+    .mostrarBotonCheckout:active{
         background-color: #976dc5;
     }
+#noSeAgregoNingunManga{
+    margin-top: 50vh;
+}
