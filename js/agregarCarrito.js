@@ -60,3 +60,21 @@ for(const el of carrito){
     }
     
 }}
+
+if(localStorage.getItem("mangasComprados")){
+    comprados = JSON.parse(localStorage.getItem("mangasComprados"));
+    for(const el of comprados){
+        let botonComprar = document.getElementById("buyButton");
+        let botonAgregado = document.getElementById("addedButton");
+        let botonComprado = document.getElementById("purchasedButton");
+        let precio = document.getElementById("price");
+        console.log(botonComprar.className)
+        if(botonComprar.className == el.id){
+            botonComprar.className = "hidden"
+            botonAgregado.className = "hidden"
+            botonComprado.className = "purchasedButton"
+            precio.className = "hidden"
+        }
+        
+    }
+}

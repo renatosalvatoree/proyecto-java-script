@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    <main>
+  <main>
     <nav>
-        <div class="navBar">
-            <a href="../index.html"><img src="../images/icons/m.png" class="logo"></a>
-            <ul>
-                <li><a href="../pages/search.html"><img src="../images/icons/search.png" class="searchIcon"></a></li>
-                <li><a href="./saves.html"><img src="../images/icons/bookmark.png"></a></li>
-                <li><a href="../index.html"><img src="../images/icons/shopping-cart.png"></a></li>
-            </ul>
-        </div>
+      <div class="navBar">
+        <a href="../index.html"><img src="../images/icons/m.png" class="logo"></a>
+        <ul>
+          <li><a href="../pages/search.html"><img src="../images/icons/search.png" class="searchIcon"></a></li>
+          <li><a href="./saves.html"><img src="../images/icons/bookmark.png"></a></li>
+          <li><a href="../index.html"><img src="../images/icons/shopping-cart.png"></a></li>
+        </ul>
+      </div>
     </nav>
     <p id="noSeAgregoNingunManga">You have't added any mangas to the cart.</p>
     <table class="table table-borderless">
-        <tbody id="tablaCarrito"> 
-          <!-- <tr>
-            <td><img src="../images/mangaCovers/chainsawman.png" width="100px"></td>
-            <td>TOTAL:</td>
-            <td>$16</td>
-          </tr>  -->
-        </tbody>
-      </table>
-      <input type="button" value="Proceed to checkout" id="botonCheckout" class="hidden">
-    </main>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/agregarElementosTabla.js"></script>
-    
+      <tbody id="tablaCarrito">
+
+      </tbody>
+    </table>
+    <input type="button" value="Proceed to checkout" id="botonCheckout" class="hidden">
+    <div id="checkoutForm" class="checkoutForm">
+      <h2>Billing information</h2>
+      <form id="formulario" class="formulario">
+        <div>
+          <div>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+          </div>
+          <div>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+          </div>
+        </div>
+        <div>
+          <div>
+          <label for="lname">Your email :</label><br>
+          <input type="text" id="lname" name="lname"><br>
+        </div>
+        <div>
+          <label for="lname">Your adress:</label><br>
+          <input type="text" id="lname" name="lname"><br>
+        </div>
+        </div>
+        <div>
+          <div>
+          <label for="lname">Card Number:</label><br>
+          <input type="text" id="lname" name="lname"><br>
+        </div>
+        <div>
+          <label for="lname">Security Code:</label><br>
+          <input type="text" id="lname" name="lname"><br>
+        </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/agregarElementosTabla.js"></script>
+
 </body>
+
 </html>
