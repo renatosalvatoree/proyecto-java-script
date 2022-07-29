@@ -2,6 +2,7 @@
 
 body{
     background-color: $darkerGray;
+    
 }
 
 
@@ -129,4 +130,81 @@ body{
     height: 48px;
     font-size: 30px;
     margin-bottom: 0;
+}
+
+// .chaptersNoPurchased{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     position: absolute;
+//     top: 900px;
+//     width: 100%;
+//     div{
+//         border-radius: 5px;
+//         margin-bottom: 16px;
+//         background-color: #d8c8e9;
+//         width: 60%;
+//         height: 40px;
+//         a{
+//             pointer-events: none; 
+//             text-decoration: none;
+           
+//             p{
+//                 text-align: center;
+//                 margin-top: 8px;
+//                 width: 100%;
+                
+//             }
+//         }
+//     }
+
+    .chaptersPurchased{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 900px;
+        width: 100%;
+        div{
+            border-radius: 5px;
+            margin-bottom: 16px;
+            background-color: #976dc5;
+            width: 60%;
+            height: 40px;
+            a{
+                text-decoration: none;    
+                p{
+                    text-align: center;
+                    margin-top: 8px;
+                    width: 100%;
+                    
+                }
+            }
+        }
+}
+
+.chaptersNoPurchased{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 900px;
+    width: 100%;
+    div{
+        border-radius: 5px;
+        margin-bottom: 16px;
+        background-color: #d8c8e9;
+        width: 60%;
+        height: 40px;
+        a{
+            pointer-events: none; 
+            text-decoration: none;    
+            p{
+                text-align: center;
+                margin-top: 8px;
+                width: 100%;
+                
+            }
+        }
+    }
 }
