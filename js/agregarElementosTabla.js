@@ -4,19 +4,27 @@ let botonCheckout = document.getElementById("botonCheckout")
 // buyButton.addEventListener("click", agregarCarrito)
 carrito = JSON.parse(sessionStorage.getItem("carrito"))
 tabla = document.getElementById("tablaCarrito");
-for(el of carrito){
+let precio = 0
+for(el of carrito){  
     let nombreManga = document.createElement("td");
     let precioManga = document.createElement("td");
-    let tr = document.createElement("tr");
+    let tr = document.createElement("tr"); 
     nombreManga.innerHTML = el.nombre
-    precioManga.innerHTML = el.precio
+    precioManga.innerHTML = el.precio   
     tr.appendChild(nombreManga);
     tr.appendChild(precioManga);
     tabla.appendChild(tr)
-    let precio = 0;
     precio = precio + parseInt(el.valor)
-    console.log(precio)
+
 }
+let total = document.createElement("td")
+let precioTotal = document.createElement("td")
+let tr1 = document.createElement("tr");
+total.innerHTML = "TOTAL:"
+    precioTotal.innerHTML = "$" + precio
+    tr1.appendChild(total)
+    tr1.appendChild(precioTotal)
+    tabla.appendChild(tr1)
 
 let mostrarBotonCheckout = document.getElementById("botonCheckout");
 let texto = document.getElementById("noSeAgregoNingunManga");
