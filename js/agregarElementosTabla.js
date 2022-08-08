@@ -38,14 +38,30 @@ mostrarBotonCheckout.className = "hidden"
 })
 
 botonPurchase.addEventListener("click", () => {
-     Swal.fire({
-     title: "Great!",
-     text: "You have successfully purchased your mangas.",
-     icon: "success",
-     confirmButtonText: "OK",
-    }).then(
-        function () {window.location.reload(true)})
+        const input1 = document.getElementById("input1").value;
+        const input2 = document.getElementById("input2").value;
+        const input3 = document.getElementById("input3").value;
+        const input4 = document.getElementById("input4").value;
+        const input5 = document.getElementById("input5").value;
+    if(input1 == "" || input2 == "" || input3 == "" || input4 == "" || input5 == ""){
+        console.log(input1)
+        Swal.fire({
+            title: "Oh!",
+            text: "You must complete all fields.",
+            icon: "error",
+            confirmButtonText: "OK",
+        })}
+        else{
+  Swal.fire({
+      title: "Great!",
+      text: "You have successfully purchased your mangas.",
+      icon: "success",
+      confirmButtonText: "OK",
+ }).then(
+    function () {window.location.reload(true)})
     localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
     sessionStorage.removeItem("carrito")
+        }
+    
     })
 
