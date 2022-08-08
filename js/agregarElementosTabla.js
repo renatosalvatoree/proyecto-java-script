@@ -1,7 +1,5 @@
 let carrito = [];
 let botonCheckout = document.getElementById("botonCheckout")
-// const buyButton = document.getElementById("buyButton");
-// buyButton.addEventListener("click", agregarCarrito)
 carrito = JSON.parse(sessionStorage.getItem("carrito"))
 tabla = document.getElementById("tablaCarrito");
 let precio = 0

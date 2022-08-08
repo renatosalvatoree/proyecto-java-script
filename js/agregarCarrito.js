@@ -1,36 +1,7 @@
-
-// const mangas = [{
-//     nombre: "hunter x hunter",
-//     id: "hunterXHunter",
-// },
-// {
-//     nombre: "jojo - steel ball run",
-//     id: "steelBallRun"
-// },
-// {
-//     nombre: "chainsaw man",
-//     id: "chainsawMan"
-// },
-// {
-//     nombre: "fairy tail",
-//     id: "fairyTail"
-// },
-// {
-//     nombre: "spy x family",
-//     id: "spyXFamily"
-// },
-// {
-//     nombre: "jojo - stone ocean",
-//     id: "stoneOcean"
-// }
-// ]
-
-
 const buyButton = document.getElementById("buyButton");
 buyButton.addEventListener("click", agregarCarrito)
 
 let carrito = [];      
-
 
 function agregarCarrito(){
     const carritoJSON = sessionStorage.getItem("carrito");

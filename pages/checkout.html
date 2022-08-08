@@ -30,38 +30,37 @@
     <input type="button" value="Proceed to checkout" id="botonCheckout" class="hidden">
     <div id="checkoutForm" class="checkoutForm">
       <h2>Billing information</h2>
-      <form id="formulario" class="formulario">
-        <div>
-          <div>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+    <div class="formulario">
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
           </div>
-          <div>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
           </div>
         </div>
-        <div>
-          <div>
-          <label for="lname">Your email :</label><br>
-          <input type="text" id="lname" name="lname"><br>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
         </div>
-        <div>
-          <label for="lname">Your adress:</label><br>
-          <input type="text" id="lname" name="lname"><br>
-        </div>
-        </div>
-        <div>
-          <div>
-          <label for="lname">Card Number:</label><br>
-          <input type="text" id="lname" name="lname"><br>
-        </div>
-        <div>
-          <label for="lname">Security Code:</label><br>
-          <input type="text" id="lname" name="lname"><br>
-        </div>
-        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Card Number">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Security Code">
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col">
+            <input type="submit" value="Purchase" class="form-control" id="purchaseButton">
+          </div>
+        </div>     
       </form>
+    </div>
+    
     </div>
   </main>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
