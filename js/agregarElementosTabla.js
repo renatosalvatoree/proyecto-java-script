@@ -1,5 +1,7 @@
 let carrito = [];
 let botonCheckout = document.getElementById("botonCheckout")
+let botonPurchase = document.getElementById("purchaseButton")
+let formulario = document.getElementById("checkoutForm")
 carrito = JSON.parse(sessionStorage.getItem("carrito"))
 tabla = document.getElementById("tablaCarrito");
 let precio = 0
@@ -28,15 +30,22 @@ let mostrarBotonCheckout = document.getElementById("botonCheckout");
 let texto = document.getElementById("noSeAgregoNingunManga");
 texto.className = "hidden"
 mostrarBotonCheckout.className = "mostrarBotonCheckout"
+
 botonCheckout.addEventListener("click", () => {
-    Swal.fire({
-    title: "Great!",
-    text: "You have successfully purchased your mangas.",
-    icon: "success",
-    confirmButtonText: "OK",
-}).then(
-    function () {window.location.reload(true)})
-localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
-sessionStorage.removeItem("carrito")
+formulario.className = "checkoutForm"
+tabla.className = "hidden"
+mostrarBotonCheckout.className = "hidden"
 })
+
+botonPurchase.addEventListener("click", () => {
+     Swal.fire({
+     title: "Great!",
+     text: "You have successfully purchased your mangas.",
+     icon: "success",
+     confirmButtonText: "OK",
+    }).then(
+        function () {window.location.reload(true)})
+    localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
+    sessionStorage.removeItem("carrito")
+    })
 

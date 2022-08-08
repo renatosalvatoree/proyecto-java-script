@@ -1,8 +1,11 @@
 .table{
-    margin-top: 90px;
+    // margin-top: 90px;
     width: 40%;
     background-color: rgb(203, 182, 226);
     border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
 }
 
 .mostrarBotonCheckout{
@@ -16,6 +19,10 @@
         background-color: $main-color;
         color: white;
         border: 0px;
+        margin-top: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
     }
     .mostrarBotonCheckout:hover{
         background-color: #b192d4;
@@ -34,6 +41,7 @@
     position: absolute;
     top: 50%;
     left: 30%;
+    transform: translateY(-50%);
     h2{
         margin-top: 28px;
         text-align: center;
