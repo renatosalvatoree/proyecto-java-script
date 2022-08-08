@@ -5,7 +5,6 @@ async function obtenerMangas(){
     sessionStorage.setItem("mangas", JSON.stringify(mangas))
 }
 obtenerMangas();
-
 const mangas = JSON.parse(sessionStorage.getItem("mangas"))
 
 // obtenerMangas();
@@ -47,18 +46,12 @@ const mangas = JSON.parse(sessionStorage.getItem("mangas"))
 // }
 // ]
 
-
-
-
-
-
 let mangasGuardados = [];
-//localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
 const guardado = document.getElementById("guardado");
 const noGuardado = document.getElementById("noGuardado");
 const saveButton = document.getElementById("saveButton");
 
-if(localStorage.getItem("mangasGuardados")){
+if(localStorage.getItem("mangasGuardados") == null){
     localStorage.setItem("mangasGuardados", JSON.stringify(mangasGuardados));
 }
 mangasGuardados = JSON.parse(localStorage.getItem("mangasGuardados"))
