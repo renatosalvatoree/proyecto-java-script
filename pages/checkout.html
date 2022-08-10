@@ -13,59 +13,62 @@
   <main>
     <nav>
       <div class="navBar">
-        <a href="../index.html"><img src="../images/icons/m.png" class="logo"></a>
+        <a href="../index.html"><img src="../images/icons/m.png" class="logo" alt="mangadex logo"></a>
         <ul>
-          <li><a href="../pages/search.html"><img src="../images/icons/search.png" class="searchIcon"></a></li>
-          <li><a href="./saves.html"><img src="../images/icons/bookmark.png"></a></li>
-          <li><a href="../index.html"><img src="../images/icons/shopping-cart.png"></a></li>
+          <li><a href="../pages/search.html"><img src="../images/icons/search.png" class="searchIcon" alt="search icon"></a></li>
+          <li><a href="./saves.html"><img src="../images/icons/bookmark.png" alt="bookmark icon"></a></li>
+          <li><a href="../index.html"><img src="../images/icons/shopping-cart.png" alt="cart icon"></a></li>
         </ul>
       </div>
     </nav>
     <p id="noSeAgregoNingunManga">You have't added any mangas to the cart.</p>
+   
+    <!-- mangas checkout table -->
+
     <table class="table table-borderless">
       <tbody id="tablaCarrito">
-
       </tbody>
     </table>
     <input type="button" value="Proceed to checkout" id="botonCheckout" class="hidden">
+
+    <!-- checkout form -->
+    
     <div id="checkoutForm" class="hidden">
       <h2>Billing information</h2>
-    <div class="formulario">
-      <form>
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="First name" id="input1">
+      <div class="formulario">
+        <form>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" id="input1">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" id="input2">
+            </div>
           </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Last name" id="input2">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Email" id="input3">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Email" id="input3">
+          <div class="row">
+            <div class="col">
+              <input type='text' class="form-control" placeholder="Card Number" id="input4">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Security Code" id="input5">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <input type='text' class="form-control" placeholder="Card Number" id="input4">
+          <div class="row">
+            <div class="col">
+              <input type="button" value="Purchase" class="form-control" id="purchaseButton">
+            </div>
           </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Security Code" id="input5">
-          </div>
-        </div> 
-        <div class="row">
-          <div class="col">
-            <input type="button" value="Purchase" class="form-control" id="purchaseButton">
-          </div>
-        </div>     
-      </form>
-    </div>
-    
+        </form>
+      </div>
     </div>
   </main>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="../js/agregarElementosTabla.js"></script>
-
+  <script src="../js/agregarElementosTablaYCheckout.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+/* Este script se encarga de modificar el css del boton de agregar al carrito 
+y agrega los mangas al carrito*/
 const buyButton = document.getElementById("buyButton");
 buyButton.addEventListener("click", agregarCarrito)
 
