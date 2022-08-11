@@ -68,7 +68,15 @@ botonPurchase.addEventListener("click", () => {
             function () {
                 window.location.reload(true)
             })
-        localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
+       
+        if (localStorage.getItem("mangasComprados") == ""){
+            localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
+        } else{
+            const el = JSON.parse(sessionStorage.getItem("carrito"))
+            const mangasComprados = el.concat(JSON.parse(localStorage.getItem("mangasComprados")))
+            localStorage.setItem("mangasComprados", JSON.stringify(mangasComprados))
+        }
+        //localStorage.setItem("mangasComprados", sessionStorage.getItem("carrito"))
         sessionStorage.removeItem("carrito")
     }
 
