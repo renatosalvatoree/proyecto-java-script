@@ -1,14 +1,6 @@
 /* Este script se encarga del guardado de los mangas */
 
 //Se obtiene el array del archivo .json
-async function obtenerMangas(){
-    const res = await fetch ("mangas.json")
-    // await sessionStorage.setItem("mangas", res)
-    const mangas = await res.json();
-    sessionStorage.setItem("mangas", JSON.stringify(mangas))
-}
-obtenerMangas();
-const mangas = JSON.parse(sessionStorage.getItem("mangas"))
 
 /* Anteriormente todos los datos de los mangas se obtenian de este array.
 Actualemente los datos son obtenidos del archivo .json pero lo deje para que se entienda mejor 

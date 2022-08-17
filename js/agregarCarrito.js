@@ -1,11 +1,35 @@
 /* Este script se encarga de modificar el css del boton de agregar al carrito 
 y agrega los mangas al carrito*/
+async function obtenerMangas(){
+    let myInit = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        cache: 'default'
+      };
+    let myRequest = new Request("mangas.json", myInit)
+
+    const res = await fetch (myRequest)
+    // await sessionStorage.setItem("mangas", res)
+    let mangas = await res.json();
+    sessionStorage.setItem("mangas", JSON.stringify(mangas))
+}
+obtenerMangas();
+const mangas = JSON.parse(sessionStorage.getItem("mangas"))
+
+
+
 const buyButton = document.getElementById("buyButton");
 buyButton.addEventListener("click", agregarCarrito)
 
 let carrito = [];      
 
 function agregarCarrito(){
+    obtenerMangas();
+let mangas = JSON.parse(sessionStorage.getItem("mangas"))
+
     const carritoJSON = sessionStorage.getItem("carrito");
     if(carritoJSON){
         carrito = JSON.parse(sessionStorage.getItem("carrito"));
